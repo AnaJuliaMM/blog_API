@@ -15,7 +15,7 @@ class ArticleModel(models.Model):
     title = models.CharField(max_length=64)
     subject = models.CharField(max_length=128)
     content = models.TextField()
-    category = models.ForeignKey(CategoryModel, related_name="categories", on_delete=models.CASCADE)
+    category = models.ForeignKey(CategoryModel, related_name="articles", on_delete=models.CASCADE)
 
     def __str__(self):
         """

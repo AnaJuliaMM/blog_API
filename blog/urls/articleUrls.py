@@ -14,10 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from blog.views.article.articleView import ArticleView
+# Import the necessary modules from Django
+from django.urls import path
 
+# Import the view class that will handle the URL pattern
+from blog.views import ArticleView
+
+# Define a list of URL patterns using the 'urlpatterns' variable
 urlpatterns = [
+    # Define a URL pattern using the 'path' function:
+    # - The empty string ('') represents the URL path that this pattern will match.
+    # - 'ArticleView.as_view()' specifies the view class that will handle this URL pattern and will ne invoked to handle the request.
+    #   '.as_view()' is used to convert the view class into a callable view function.
     path('', ArticleView.as_view())
 ]
+

@@ -17,4 +17,4 @@ class CategoryModel(models.Model):
         Returns:
             str: A formatted string representing the category.
         """
-        return f'Category({self.category})'
+        return f'{self.category}'
