@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'jutaywal',
+        'USER': 'jutaywal',
+        'PASSWORD': 'rG7qtl24-TgiKNbvDqTsGp_q86jsCLe9',
+        'HOST': 'berry.db.elephantsql.com',
+        'PORT': '5432',  # A porta padrão do PostgreSQL
     }
 }
 
